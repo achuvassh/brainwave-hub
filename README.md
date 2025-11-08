@@ -1,5 +1,5 @@
 # BrainWave Hub
-    Multitool and multipersonal platform with diagram, text, presentation editors, ai chat-bot, messager for team, todo list and integrated music player
+Multitool and multipersonal platform with diagram, text, presentation editors, ai chat-bot, messager for team, todo list and integrated music player
 
 ## Instalation
 
