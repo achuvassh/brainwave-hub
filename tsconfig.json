@@ -18,6 +18,7 @@
         "name": "next"
       }
     ],
+    "types": ["styled-components/cssprop"],
     "paths": {
       "@/*": ["./src/*"]
     }
