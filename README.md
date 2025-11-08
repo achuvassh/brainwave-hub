@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# BrainWave Hub
+    Multitool and multipersonal platform with diagram, text, presentation editors, ai chat-bot, messager for team, todo list and integrated music player
 
-## Getting Started
-
-First, run the development server:
+## Instalation
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
+then open [localhost:3000](localhost:3000) 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features TODO
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### project
+- [ ] Dark theme
+- [ ] Translation to English
+- [ ] Authorization and authentication
+- [ ] Room creation (collaborative work)
+- [ ] Integration with Yandex.Music and VK Music
+- [ ] Mindmap
+- [ ] Text editor
+- [ ] Presentation editor
+- [ ] Chat-bot
+- [ ] Messenger (For room)
+- [ ] TODO-list
+- [ ] Tooltips on button hover
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### sections
+1. mindmap
+- [ ] Design*
+- [ ] Shape selection
+- [ ] Text inside shape
+- [ ] Block connections
+- [ ] Text styling
+- [ ] Block styling
 
-## Learn More
+2. text editor
+- [ ] Design*
+- [ ] Create or open .docx
+- [ ] Text editing
+- [ ] Tables
+- [ ] Images
+- [ ] Save to .pdf/.docx/.txt
+- [ ] File history
 
-To learn more about Next.js, take a look at the following resources:
+3. Presentation editor
+- [ ] Design*
+- [ ] Create or open .pptx
+- [ ] Adding slides
+- [ ] Text editing
+- [ ] Tables
+- [ ] Images
+- [ ] Preview
+- [ ] Transitions (?)
+- [ ] Save to .pptx
+- [ ] File history
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. chat-bot
+- [ ] Design*
+- [ ] Select model
+- [ ] Attach photo
+- [ ] Copy response
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+5. messenger
+- [ ] Design*
+- [ ] Message display
+- [ ] Attach photo
+- [ ] Ability to insert photo into document/presentation
+- [ ] integration ai chat-bot
+- [ ] Emojis (?)
 
-## Deploy on Vercel
+6. left-menu
+- [ ] Display active tab
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+7. header
+- [ ] Room number or create room
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+8. right-sidebar
+- [ ] ya.music
+- [ ] vk music
+- [ ] todo list*
