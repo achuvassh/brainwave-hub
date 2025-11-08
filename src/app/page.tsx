@@ -1,13 +1,16 @@
 'use client'
 
-import styled from 'styled-components';
 import { useState } from 'react'
 import { SelectorTypes } from '@/helpers/types/types';
-import { MindMap } from '@/components/sections/mindmap/mindmap';
+import { MindMap } from '@/components/sections/';
 import { PageContainer } from './page.styled';
 
 export default function Home() {
   const [section, setSection] = useState<SelectorTypes>('mindmap')
+
+  const switchSection = (section: SelectorTypes) => {
+    setSection(section)
+  }
 
   let SelectedSection
   switch (section) {
