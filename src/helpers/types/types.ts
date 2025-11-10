@@ -11,3 +11,8 @@ export interface IMenuItems {
     tooltip: string,
     section: SelectorTypes
 }
+
+export interface ILangTypes {
+    tooltips: Record<string, string>
+    [key: string]: any
+}

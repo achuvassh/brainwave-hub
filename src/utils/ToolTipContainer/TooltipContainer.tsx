@@ -2,6 +2,7 @@
 
 import { FC, ReactElement, useState } from "react"
 import { TTContainer, TTText } from "./TooltipContainer.styled"
+import { useLang } from "@/helpers/hooks/useLang"
 
 interface ITooltipContainerProps {
     tooltip: string
@@ -9,6 +10,7 @@ interface ITooltipContainerProps {
 }
 
 export const TooltipContainer: FC<ITooltipContainerProps> = ({tooltip, children}) => {
+    const {t} = useLang()
     const [active, setActive] = useState<boolean>(false)
     const handleMouseEnter = () => {
         setActive(true)
@@ -17,10 +19,10 @@ export const TooltipContainer: FC<ITooltipContainerProps> = ({tooltip, children}
     const handleMouseLeave = () => {
         setActive(false)
     }
-    
+
     return (
         <TTContainer onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-            <TTText $active={active}>{tooltip}</TTText>
+            <TTText $active={active}>{t(tooltip)}</TTText>
             {children}
         </TTContainer>
     )
