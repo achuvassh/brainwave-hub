@@ -22,7 +22,7 @@ export default function Home() {
 
   return (
     <PageContainer>
-      <Menu />
+      <Menu switchSection={switchSection} selected={section} />
       {SelectedSection}
     </PageContainer>
   );

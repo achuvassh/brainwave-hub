@@ -5,12 +5,13 @@ import { IButton } from "./ButtonsStyle/IconButton.styled"
 interface IIconButtonProps {
     tooltip: string
     children: ReactElement
+    onClick: () => void
 }
 
-export const IconButton: FC<IIconButtonProps> = ({tooltip, children}) => {
+export const IconButton: FC<IIconButtonProps> = ({tooltip, children, onClick}) => {
     return (
         <TooltipContainer tooltip={tooltip}>
-            <IButton>
+            <IButton onClick={onClick}>
                 {children}
             </IButton>
         </TooltipContainer>

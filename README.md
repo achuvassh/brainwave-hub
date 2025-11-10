@@ -70,7 +70,7 @@ then open [localhost:3000](localhost:3000)
 - [ ] Emojis (?)
 
 6. left-menu
-- [ ] Display active tab
+- [x] Display active tab
 
 7. header
 - [ ] Room number or create room

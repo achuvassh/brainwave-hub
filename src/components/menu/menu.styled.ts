@@ -18,3 +18,9 @@ export const MenuItemsContainer = styled.div`
     padding: 20px;
     background-color: transparent;
 `
+
+export const MenuItem = styled.div<{$active: boolean}>`
+    svg {
+        color: ${props => props.$active ? props.theme.colors.menu_active_tab : props.theme.colors.foreground};
+    }
+`

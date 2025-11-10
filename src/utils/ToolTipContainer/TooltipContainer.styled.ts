@@ -13,11 +13,13 @@ export const TTText = styled.div<{ $active: boolean }>`
     padding: 5px;
     text-align: center;
     font-size: 14px;
-    display: ${props => props.$active ? 'block' : 'none'};
-    top: -10px;
+    visibility: ${props => props.$active ? 'show' : 'hidden'};
+    opacity: ${props => props.$active ? 1 : 0};
+    top: -20px;
     width: max-content;
     background-color: ${props => props.theme.colors.tooltip};
-    padding: 5px;
     left: 5px;
     border-radius: 10px;
+    transition: opacity 0.5s;
+    transition-delay: .5s;
 `
