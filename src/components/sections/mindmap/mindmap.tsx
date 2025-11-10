@@ -1,15 +1,9 @@
-import styled from 'styled-components';
-
-const Container = styled.div`
-  background-color: ${props => props.theme.colors.background};
-  color: white;
-  padding: 20px;
-`;
+import {MindMapContainer} from './mindmap.styled'
 
 export const MindMap = () => {
     return (
-        <Container>
-
-        </Container>
+        <MindMapContainer>
+            
+        </MindMapContainer>
     )
 }

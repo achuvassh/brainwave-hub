@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { SelectorTypes } from '@/helpers/types/types';
 import { MindMap } from '@/components/sections/';
 import { PageContainer } from './page.styled';
+import { Menu } from '@/components/menu/menu';
 
 export default function Home() {
   const [section, setSection] = useState<SelectorTypes>('mindmap')
@@ -21,6 +22,7 @@ export default function Home() {
 
   return (
     <PageContainer>
+      <Menu />
       {SelectedSection}
     </PageContainer>
   );
