@@ -6,7 +6,8 @@ declare module 'styled-components' {
       background: string;
       foreground: string;
       light_dark: string;
-      menu: string
+      menu: string;
+      tooltip: string;
     };
   }
 }

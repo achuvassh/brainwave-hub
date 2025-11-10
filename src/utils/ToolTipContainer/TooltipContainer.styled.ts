@@ -14,4 +14,10 @@ export const TTText = styled.div<{ $active: boolean }>`
     text-align: center;
     font-size: 14px;
     display: ${props => props.$active ? 'block' : 'none'};
+    top: -10px;
+    width: max-content;
+    background-color: ${props => props.theme.colors.tooltip};
+    padding: 5px;
+    left: 5px;
+    border-radius: 10px;
 `

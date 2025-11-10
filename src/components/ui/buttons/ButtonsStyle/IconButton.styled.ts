@@ -9,8 +9,8 @@ export const IButton = styled.button`
     border: none;
     cursor: pointer;
     background-color: transparent;
-`
-
-export const Icon = styled.svg`
-    background-color: transparent;
+    
+    svg {
+        color: ${props => props.theme.colors.foreground}
+    }
 `
