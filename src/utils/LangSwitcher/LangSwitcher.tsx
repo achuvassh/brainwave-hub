@@ -1,8 +1,7 @@
 'use client'
 
 import { useLangContext } from "@/app/providers/LangProvider"
-import Image from "next/image"
-import { LangSwitcherContainer, LangSwitcherInput, LangSwitcher, LangSwitcherSwitcher } from "./LangSwitcher.styled"
+import { LangSwitcherContainer, LangSwitcher, LangSwitcherSwitcher } from "./LangSwitcher.styled"
 
 export const LanguageSwitcher = () => {
     const {currentLang, setLang} = useLangContext()
@@ -14,7 +13,6 @@ export const LanguageSwitcher = () => {
 
     return (
         <LangSwitcherContainer>
-            <LangSwitcherInput type='checkbox' />
             <LangSwitcher>
                 <LangSwitcherSwitcher $lang={currentLang} onClick={toggleLang} />
             </LangSwitcher>

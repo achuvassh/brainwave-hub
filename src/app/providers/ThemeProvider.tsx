@@ -65,3 +65,11 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     </ThemeContext.Provider>
   );
 }
+
+export const useThemeContext = () => {
+  const context = useContext(ThemeContext)
+    if (!context) {
+      throw new Error('useLangContext должен использоваться внутри LangProvider')
+    }
+  return context
+}

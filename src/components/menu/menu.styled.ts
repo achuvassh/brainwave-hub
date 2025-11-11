@@ -4,7 +4,7 @@ export const MenuContainer = styled.div`
     display: flex;
     flex-direction: column;
     width: 100px;
-    background-color: ${props => props.theme.colors.menu};
+    background-color: ${props => props.theme.colors.sidebar};
     border: 1px solid ${props => props.theme.colors.foreground};
     border-left: none;
     border-top-right-radius: 20px;

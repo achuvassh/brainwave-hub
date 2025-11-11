@@ -11,7 +11,7 @@ export const HeaderContainer = styled.div`
     border-bottom-right-radius: 20px;
     border: 1px ${props => props.theme.colors.foreground} solid;
     border-top: none;
-    background-color: ${props => props.theme.colors.background};
+    background-color: ${props => props.theme.colors.sidebar};
     color: ${props => props.theme.colors.foreground};
 `
 
