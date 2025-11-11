@@ -7,7 +7,7 @@ Multitool and multipersonal platform with diagram, text, presentation editors, a
 npm install
 npm run dev
 ```
-then open [localhost:3000](localhost:3000) 
+then open [localhost:3000](http://localhost:3000) 
 
 ## Features TODO
 
