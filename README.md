@@ -12,7 +12,7 @@ then open [localhost:3000](localhost:3000)
 ## Features TODO
 
 ### project
-- [ ] Dark theme
+- [x] Dark theme
 - [ ] Translation to English
 - [ ] Authorization and authentication
 - [ ] Room creation (collaborative work)
@@ -23,7 +23,7 @@ then open [localhost:3000](localhost:3000)
 - [ ] Chat-bot
 - [ ] Messenger (For room)
 - [ ] TODO-list
-- [ ] Tooltips on button hover
+- [x] Tooltips on button hover
 
 ### sections
 1. mindmap
