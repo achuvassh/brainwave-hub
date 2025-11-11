@@ -2,6 +2,7 @@ import { MenuItems } from "@/helpers/vars/vars"
 import { IconButton } from "../ui/buttons/IconButton"
 import { MenuContainer, MenuItemsContainer, MenuItem } from "./menu.styled"
 import { SelectorTypes } from "@/helpers/types/types"
+import { LanguageSwitcher } from "@/utils/LangSwitcher/LangSwitcher"
 
 interface IMenuProps {
     switchSection: (section: SelectorTypes) => void    
@@ -17,6 +18,10 @@ export const Menu: React.FC<IMenuProps> = ({switchSection, selected}) => {
                         <IconButton onClick={() => switchSection(el.section)} tooltip={el.tooltip}>{el.icon}</IconButton>
                     </MenuItem>
                 ))} 
+            </MenuItemsContainer>
+            <MenuItemsContainer>
+                <LanguageSwitcher />
+                
             </MenuItemsContainer>
         </MenuContainer>
     )

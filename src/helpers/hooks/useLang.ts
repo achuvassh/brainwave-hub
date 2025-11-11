@@ -1,52 +1,34 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { RU, EN } from '../locales'
 import { ILangTypes } from '../types/types'
 
 export const useLang = () => {
-    const getDefaultLang = (): string => {
-        const browserLang = navigator.language.split('-')[0]
-        let lang
-        switch (browserLang) {
-            case 'ru':
-                lang = 'ru'
-                break
-            case 'en':
-                lang = 'en'
-                break
-            default: 
-                lang = 'en'
-                break
-        }
-        return lang
-    }
+  const getDefaultLang = (): string => {
+    const browserLang = navigator.language.split('-')[0]
+    return ['ru', 'en'].includes(browserLang) ? browserLang : 'en'
+  }
 
-    const [currentLang, setCurrentLang] = useState<string>(getDefaultLang())
+  const [currentLang, setCurrentLang] = useState<string>(() => {
+    return localStorage.getItem('lang') || getDefaultLang()
+  })
 
-    useEffect(() => {
-        const storedLang = localStorage.getItem('lang')
-        if (storedLang) {
-            setCurrentLang(storedLang)
-        }
-    }, [])
+  useEffect(() => {
+    localStorage.setItem('lang', currentLang)
+  }, [currentLang])
 
-    const setLang = (lang: string) => {
-        localStorage.setItem('lang', lang)
-        setCurrentLang(lang)
-    }
+  const setLang = useCallback((lang: string) => {
+    if (!['ru', 'en'].includes(lang)) return
+    setCurrentLang(lang)
+  }, [])
 
-    const t = (id: string) => {
-        let translated_text: string
+  const t = useCallback(
+    (id: string): string => {
+      const [group, key] = id.split('.')
+      const langObj = currentLang === 'ru' ? (RU as ILangTypes) : (EN as ILangTypes)
+      return langObj[group]?.[key] ?? id
+    },
+    [currentLang]
+  )
 
-        if (currentLang === 'ru') {
-            const ruObj = RU as ILangTypes
-            translated_text = ruObj[id.split('.')[0]][id.split('.')[1]] || id
-        } else {
-            const enObj = EN as ILangTypes
-            translated_text = enObj[id.split('.')[0]][id.split('.')[1]] || id
-        }
-
-        return translated_text
-    }
-
-    return { t, currentLang, setLang }
+  return { t, currentLang, setLang }
 }
