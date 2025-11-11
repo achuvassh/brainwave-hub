@@ -1,6 +1,6 @@
 import { MenuItems } from "@/helpers/vars/vars"
 import { IconButton } from "../ui/buttons/IconButton"
-import { MenuContainer, MenuItemsContainer, MenuItem } from "./menu.styled"
+import { MenuContainer, MenuItemsContainer, MenuItem, MenuItemsContainerBottom } from "./menu.styled"
 import { SelectorTypes } from "@/helpers/types/types"
 import { LanguageSwitcher } from "@/utils/LangSwitcher/LangSwitcher"
 import { ThemeSwitcherComponent } from "@/utils/ThemeSwitcher/ThemeSwitcher"
@@ -20,10 +20,10 @@ export const Menu: React.FC<IMenuProps> = ({switchSection, selected}) => {
                     </MenuItem>
                 ))} 
             </MenuItemsContainer>
-            <MenuItemsContainer>
+            <MenuItemsContainerBottom>
                 <LanguageSwitcher />
                 <ThemeSwitcherComponent />
-            </MenuItemsContainer>
+            </MenuItemsContainerBottom>
         </MenuContainer>
     )
 }

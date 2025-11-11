@@ -12,6 +12,7 @@ export const LangSwitcher = styled.div`
     height: 30px;
     width: 100%;
     border-radius: 50px;
+    cursor: pointer;
 `
 
 export const LangSwitcherSwitcher = styled.div<{ $lang: string }>`
@@ -25,5 +26,4 @@ export const LangSwitcherSwitcher = styled.div<{ $lang: string }>`
     box-shadow: 0 0 3px 3px #000;
     left: ${props => props.$lang === 'ru' ? '5px' : 'calc(100% - 25px)'};
     transition: left 0.4s ease-in-out;
-    cursor: pointer;
 `

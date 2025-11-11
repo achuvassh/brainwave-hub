@@ -9,11 +9,11 @@ export const ThemeSwitcherComponent = () => {
     const handleToggleTheme = () => {
         toggleTheme()
     }
-    console.log(theme, 'ct')
+
     return (
         <ThemeSwitcherContainer>
-            <ThemeSwitcher>
-                <ThemeSwitcherSwitcher $theme={theme} onClick={handleToggleTheme} />
+            <ThemeSwitcher onClick={handleToggleTheme}>
+                <ThemeSwitcherSwitcher $theme={theme}/>
             </ThemeSwitcher>
         </ThemeSwitcherContainer>
     )

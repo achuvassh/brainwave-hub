@@ -7,11 +7,12 @@ export const ThemeSwitcherContainer = styled.div`
     justify-content: center;
 `
 
-export const ThemeSwitcher = styled.div`
+export const ThemeSwitcher = styled.button`
     border: 1px solid ${props => props.theme.colors.light_dark};
     background-color: #fff;
     height: 30px;
     width: 100%;
+    cursor: pointer;
     border-radius: 50px;
 `
 
@@ -24,5 +25,4 @@ export const ThemeSwitcherSwitcher = styled.div<{ $theme: string }>`
     top: 5px;
     left: ${props => props.$theme === 'light' ? '5px' : 'calc(100% - 25px)'};
     transition: left 0.4s ease-in-out;
-    cursor: pointer;
 `

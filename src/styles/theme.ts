@@ -4,7 +4,7 @@ export const lightTheme = {
     foreground: '#000000',
     light_dark: '#1B1D1E',
     sidebar: '#ECEAF3',
-    tooltip: '#1D241E',
+    tooltip: '#CDE2D2',
     menu_active_tab: '#00E63A',
   },
 };

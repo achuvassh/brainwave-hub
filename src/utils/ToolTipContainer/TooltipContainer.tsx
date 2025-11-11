@@ -2,7 +2,6 @@
 
 import { FC, ReactElement, useState } from "react"
 import { TTContainer, TTText } from "./TooltipContainer.styled"
-// import { useLang } from "@/helpers/hooks/useLang"
 import { useLangContext } from '@/app/providers/LangProvider'
 
 interface ITooltipContainerProps {

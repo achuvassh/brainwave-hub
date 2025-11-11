@@ -12,9 +12,9 @@ export const LanguageSwitcher = () => {
     }
 
     return (
-        <LangSwitcherContainer>
+        <LangSwitcherContainer onClick={toggleLang}>
             <LangSwitcher>
-                <LangSwitcherSwitcher $lang={currentLang} onClick={toggleLang} />
+                <LangSwitcherSwitcher $lang={currentLang} />
             </LangSwitcher>
         </LangSwitcherContainer>
     )
